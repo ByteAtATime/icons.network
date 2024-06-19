@@ -1,21 +1,6 @@
 import type { RequestHandler } from "./$types";
 import { error } from '@sveltejs/kit';
-import { read } from '$app/server';
-
-const getIconById = async (id: number): Promise<Response|null> => {
-	try {
-		const icon = await import(`$lib/icons/${id}.svg`);
-
-		const response = read(icon.default);
-
-		response.headers.set('Content-Type', 'image/svg+xml');
-
-		return response;
-	} catch (e) {
-		console.error(e);
-		return null;
-	}
-}
+import { getIconById } from '$lib/icon';
 
 export const GET: RequestHandler = async ({params, url}) => {
 	const {id: rawId} = params;
