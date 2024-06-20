@@ -6,10 +6,10 @@
 
 	<div>
 		<div>
-			<img src="/id/1" alt="Ethereum" /> <code>&lt;img src="https://icons.network/id/1" /&gt;</code>
+			<img alt="Ethereum" src="/id/1" /> <code>&lt;img src="https://icons.network/id/1" /&gt;</code>
 		</div>
 		<div>
-			<img src="/id/10" alt="Optimism" />
+			<img alt="Optimism" src="/id/10" />
 			<code>&lt;img src="https://icons.network/id/10" /&gt;</code>
 		</div>
 	</div>
@@ -18,11 +18,11 @@
 
 	<div>
 		<div>
-			<img src="/slug/mainnet" alt="Ethereum" />
+			<img alt="Ethereum" src="/slug/mainnet" />
 			<code>&lt;img src="https://icons.network/slug/mainnet" /&gt;</code>
 		</div>
 		<div>
-			<img src="/slug/optimism" alt="Optimism" />
+			<img alt="Optimism" src="/slug/optimism" />
 			<code>&lt;img src="https://icons.network/slug/optimism" /&gt;</code>
 		</div>
 	</div>
@@ -31,13 +31,14 @@
 
 	<div>
 		<div>
-			<img src="/id/0?fallback=10" alt="Optimism" />
+			<img alt="Optimism" src="/id/0?fallback=10" />
 			<code>&lt;img src="https://icons.network/id/0?fallback=10" /&gt;</code>
 		</div>
 
 		<div>
-			<img src="/slug/this-doesnt-exist?fallback=ethereum" alt="Unknown" />
-			<code>&lt;img src="https://icons.network/slug/this-doesnt-exist?fallback=ethereum" /&gt;</code>
+			<img alt="Unknown" src="/slug/this-doesnt-exist?fallback=ethereum" />
+			<code>&lt;img src="https://icons.network/slug/this-doesnt-exist?fallback=ethereum" /&gt;</code
+			>
 		</div>
 	</div>
 
