@@ -7,8 +7,6 @@ export const GET: RequestHandler = async ({ params, url }) => {
 
 	const id = parseInt(rawId);
 
-	if (!id) error(400, `Invalid chain id ${id}`);
-
 	const icon = await getIconById(id);
 
 	if (icon) return icon;
