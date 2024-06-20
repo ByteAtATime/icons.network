@@ -7,6 +7,10 @@ const SLUG_TO_CHAIN_ID: Record<string, number> = {
 	mainnet: 1,
 	optimism: 10,
 	optimistic: 10,
+	polygon: 137,
+	zksync: 324,
+	base: 8453,
+	arbitrum: 42161,
 };
 
 export const GET: RequestHandler = async ({ params, url }) => {
