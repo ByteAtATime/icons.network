@@ -10,7 +10,7 @@ const SLUG_TO_CHAIN_ID: Record<string, number> = {
 	polygon: 137,
 	zksync: 324,
 	base: 8453,
-	arbitrum: 42161,
+	arbitrum: 42161
 };
 
 export const GET: RequestHandler = async ({ params, url }) => {
@@ -22,7 +22,8 @@ export const GET: RequestHandler = async ({ params, url }) => {
 	if (icon) return icon;
 
 	const fallback = url.searchParams.get('fallback');
-	if (!fallback) return error(404, `Icon not found for chain id ${id} (retrieved with slug "${slug}")`);
+	if (!fallback)
+		return error(404, `Icon not found for chain id ${id} (retrieved with slug "${slug}")`);
 
 	const fallbackId = SLUG_TO_CHAIN_ID[fallback];
 

@@ -1,7 +1,7 @@
 import { read } from '$app/server';
 import { error } from '@sveltejs/kit';
 
-export const getIconById = async (id: number): Promise<Response|null> => {
+export const getIconById = async (id: number): Promise<Response | null> => {
 	try {
 		const icon = await import(`$lib/icons/${id}.svg`);
 
@@ -14,4 +14,4 @@ export const getIconById = async (id: number): Promise<Response|null> => {
 		console.error(e);
 		return null;
 	}
-}
+};
