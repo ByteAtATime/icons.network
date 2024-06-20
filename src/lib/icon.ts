@@ -1,9 +1,14 @@
 import { read } from '$app/server';
-import { error } from '@sveltejs/kit';
+
+const rawIcons = import.meta.glob('$lib/icons/*.svg');
+
+const icons = Object.fromEntries(
+	Object.entries(rawIcons).map(([ key, value ]) => [ key.match(/\d+/)![0], value ])
+);
 
 export const getIconById = async (id: number): Promise<Response | null> => {
 	try {
-		const icon = await import(`$lib/icons/${id}.svg`);
+		const icon = (await icons[id]()) as { default: string };
 
 		const response = read(icon.default);
 
