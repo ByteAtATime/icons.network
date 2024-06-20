@@ -26,6 +26,20 @@
 			<code>&lt;img src="https://icons.network/slug/optimism" /&gt;</code>
 		</div>
 	</div>
+
+	<p>Relying on user input? You can add a fallback chain!</p>
+
+	<div>
+		<div>
+			<img src="/id/0?fallback=10" alt="Optimism" />
+			<code>&lt;img src="https://icons.network/id/0?fallback=10" /&gt;</code>
+		</div>
+
+		<div>
+			<img src="/slug/this-doesnt-exist?fallback=ethereum" alt="Unknown" />
+			<code>&lt;img src="https://icons.network/slug/this-doesnt-exist?fallback=ethereum" /&gt;</code>
+		</div>
+	</div>
 </main>
 
 <style>
@@ -44,6 +58,7 @@
 	main > div {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 24px 0;
 	}
 
