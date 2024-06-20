@@ -40,36 +40,41 @@
 			<code>&lt;img src="https://icons.network/slug/this-doesnt-exist?fallback=ethereum" /&gt;</code>
 		</div>
 	</div>
+
+	<p>
+		Have a chain you want to add?
+		<a href="https://github.com/ByteAtATime/icons.network"><strong>Contribute!</strong></a>
+	</p>
 </main>
 
 <style>
-	main {
-		font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-			'Segoe UI Emoji', 'Segoe UI Symbol';
-		font-size: 1.5rem;
+    main {
+        font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-size: 1.5rem;
 
-		display: flex;
-		flex-direction: column;
-		gap: 12px 0;
-		align-items: center;
-		text-align: center;
-	}
+        display: flex;
+        flex-direction: column;
+        gap: 12px 0;
+        align-items: center;
+        text-align: center;
+    }
 
-	main > div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 24px 0;
-	}
+    main > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px 0;
+    }
 
-	main > div > div {
-		display: flex;
-		align-items: center;
-		gap: 0 8px;
-	}
+    main > div > div {
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+    }
 
-	main > div > div > img {
-		width: 48px;
-		height: 48px;
-	}
+    main > div > div > img {
+        width: 48px;
+        height: 48px;
+    }
 </style>
