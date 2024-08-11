@@ -62,7 +62,8 @@ const getIconBySlug = async (slug: string) => {
 const iconMetadataToResponse = async (metadata: GetImageResult, reqUrl: string) => {
 	const res = await fetch(new URL(metadata.src, reqUrl));
 	const headers = new Headers(res.headers);
-	headers.set('Content-Type', 'image/svg+xml');
+	headers.delete('Content-Encoding');
+	headers.delete('Content-Length');
 
 	return new Response(res.body, {...res, headers});
 };
