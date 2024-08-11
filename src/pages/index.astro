@@ -1,0 +1,120 @@
+---
+import '@fontsource-variable/inter';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Network Icons</title>
+	<style>
+      body {
+          font-family: 'Inter Variable', sans-serif;
+          max-width: 700px;
+          margin: 0 auto;
+          padding: 1rem;
+          text-align: center;
+      }
+
+      h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+      }
+
+      p {
+          font-size: 16px;
+          margin-bottom: 20px;
+      }
+
+      .icon-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+      }
+
+      .icon-container img {
+          width: 32px;
+          height: 32px;
+          margin-right: 10px;
+      }
+
+      @keyframes flash {
+          to {
+              background-color: #C8E6C9;
+          }
+      }
+
+      .icon-container code {
+          background-color: #f4f4f4;
+          padding: 2px 4px;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      .icon-container code.copied {
+          animation: flash 0.1s 2 alternate ease-out;
+      }
+
+      .contribute {
+          margin-top: 40px;
+          font-weight: bold;
+      }
+	</style>
+</head>
+<body>
+
+<h1>Network icons shouldn't be this hard to get</h1>
+<p>So I made this simple tool, to allow you to get them as an SVG.</p>
+
+<p>You can get them by chain ID...</p>
+
+<div class="icon-container">
+	<img src="/id/1" alt="Ethereum">
+	<code>&lt;img src="https://icons.network/id/1" /&gt;</code>
+</div>
+
+<div class="icon-container">
+	<img src="/id/10" alt="Optimism">
+	<code>&lt;img src="https://icons.network/id/10" /&gt;</code>
+</div>
+
+<p>Or by network slug (more readable, as long as it's not user input)...</p>
+
+<div class="icon-container">
+	<img src="/slug/mainnet" alt="Mainnet">
+	<code>&lt;img src="https://icons.network/slug/mainnet" /&gt;</code>
+</div>
+
+<div class="icon-container">
+	<img src="/slug/optimism" alt="Optimism">
+	<code>&lt;img src="https://icons.network/slug/optimism" /&gt;</code>
+</div>
+
+<p>Relying on user input? You can add a fallback chain!</p>
+
+<div class="icon-container">
+	<img src="/id/0?fallback=10" alt="Optimism">
+	<code>&lt;img src="https://icons.network/id/0?fallback=10" /&gt;</code>
+</div>
+
+<div class="icon-container">
+	<img src="/slug/this-doesnt-exist?fallback=ethereum" alt="Mainnet">
+	<code>&lt;img src="https://icons.network/slug/this-doesnt-exist?fallback=ethereum" /&gt;</code>
+</div>
+
+<p class="contribute">Have a chain you want to add? <a
+	href="https://github.com/ByteAtATime/icons.network">Contribute!</a></p>
+
+<script>
+	document.querySelectorAll('code').forEach((code) => {
+		code.addEventListener('click', () => {
+			navigator.clipboard.writeText(code.innerText);
+			code.classList.add('copied');
+			setTimeout(() => code.classList.remove('copied'), 150);
+		});
+	});
+</script>
+</body>
+</html>
