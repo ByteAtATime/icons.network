@@ -60,7 +60,11 @@ const getIconBySlug = async (slug: string) => {
 };
 
 const iconMetadataToResponse = async (metadata: GetImageResult, reqUrl: string) => {
-	return fetch(new URL(metadata.src, reqUrl));
+	const res = await fetch(new URL(metadata.src, reqUrl));
+
+	res.headers.set("Content-Type", "image/svg+xml");
+
+	return res;
 };
 
 const idMustBeNumberResponse = (idStr: string) => new Response(null, {
